@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Readet - Official Online Book Reader</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!--  Boxicons Adding -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- Link Swiper's CSS-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <a href="#" class="logo"> <i class="bx bxs-movie"></i> Movies </a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+
+      <!-- Menu -->
+      <ul class="navbar">
+        <li><a href="#home" class="home-active">Home</a></li>
+        <li><a href="#books">Books</a></li>
+      </ul>
+      <a href="#" class="btn">Sign In</a>
+    </header>
+
+    <!-- Home -->
+    <section class="home swiper" id="home">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide container">
+          <img src="img/home1.jpeg" alt="" />
+          <div class="home-text">
+            <span>BookTest</span>
+            <h1>
+              Deneme Kitap <br />
+              Test
+            </h1>
+            <a href="#" class="btn">Book Now</a>
+            <a href="#" class="play">
+              <i class="bx bx-play"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="swiper-slide container">
+          <img src="img/home1.jpeg" alt="" />
+          <div class="home-text">
+            <span>BookTest</span>
+            <h1>Deneme Kitap 2 <br />Test 2</h1>
+            <a href="#" class="btn">Book Now</a>
+            <a href="#" class="play">
+              <i class="bx bx-play"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Box 3 -->
+        <div class="swiper-slide container">
+          <img src="img/home1.jpeg" alt="" />
+          <div class="home-text">
+            <span>BookTest</span>
+            <h1>Deneme Kitap 3 <br />Test3</h1>
+            <a href="#" class="btn">Book Now</a>
+            <a href="#" class="play">
+              <i class="bx bx-play"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper pagination"></div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Link to Custom JS -->
+    <script src="main.js"></script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
