@@ -144,20 +144,23 @@ header.shadow .navbar a {
 
 .home-text {
   z-index: 1000;
-  padding: 200px;
+  padding: 300px;
+  position: relative;
+  left: -250px;
+  top: 240px;
 }
 
 .home-text span {
   color: var(--bg-color);
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
 .home-text h1 {
   color: var(--bg-color);
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .play {
@@ -219,6 +222,7 @@ header.shadow .navbar a {
 }
 
 .box h3 {
+  padding-top: 5px;
   font-size: 0.9rem;
   font-weight: 500;
 }
