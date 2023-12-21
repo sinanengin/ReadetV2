@@ -60,6 +60,13 @@ header.shadow .navbar a {
   height: 26px;
   width: auto;
 }
+#logo-black{
+  opacity: 0;
+}
+
+header.shadow #logo-black{
+  opacity: 1;
+}
 
 .logo .bx {
   font-size: 24px;
@@ -68,7 +75,7 @@ header.shadow .navbar a {
 
 .navbar {
   display: flex;
-  column-gap: 5rem;
+  column-gap: 6rem;
 }
 
 .navbar li {
@@ -149,10 +156,16 @@ header.shadow .navbar a {
 
 .home-text {
   z-index: 1000;
-  padding: 300px;
   position: relative;
-  left: -250px;
-  top: 240px;
+  text-align: center;
+  top: 200px;
+}
+
+.home-text2 {
+  z-index: 1000;
+  position: relative;
+  text-align: center;
+  top: 200px;
 }
 
 .home-text span {
@@ -162,11 +175,65 @@ header.shadow .navbar a {
 }
 
 .home-text h1 {
-  color: var(--bg-color);
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 0.8rem;
+  color: transparent;
+  -webkit-text-stroke: 3px var(--bg-color);
+  position: absolute;
+  font-size: 9rem;
+  font-weight: 1000;
+  margin-top: 6rem;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+.home-text2 h1 {
+  color: transparent;
+  -webkit-text-stroke: 3px var(--bg-color);
+  position: absolute;
+  font-size: 9rem;
+  font-weight: 1000;
+  margin-top: 6rem;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home-text h1::before {
+  content: "WELCOME";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--bg-color);
+  border-right: 8px solid var(--bg-color);
+  transition: 1s ease-in-out;
+}
+
+.home-text2 h1::before {
+  content: "LET'S START";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--bg-color);
+  border-right: 8px solid var(--bg-color);
+  transition: 1s ease-in-out;
+}
+
+.home-text h1:hover::before{
+    width: 100%;
+    filter: drop-shadow(0 0 25px var(--bg-color));
+}
+
+.home-text2 h1:hover::before{
+  width: 100%;
+  filter: drop-shadow(0 0 25px var(--bg-color));
+}
+
 
 .play {
   position: absolute;
@@ -265,8 +332,46 @@ header.shadow .navbar a {
   transition: 0.2s all linear;
 }
 
+
+.about-section{
+  background: url(img/lr-background.jpg) no-repeat left;
+  background-size: 50%;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.inner-container{
+  width: 55%;
+  float: right;
+  padding: 150px;
+}
+
+.inner-container h1{
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.text{
+  font-size: 13px;
+  color: var(--bg-color);
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+.skills{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 13px;
+}
+
 @media (max-widht:1080px){
   .home-text{
+    padding: 0 100px;
+  }
+  .home-text2{
     padding: 0 100px;
   }
 }
@@ -279,7 +384,10 @@ header.shadow .navbar a {
     padding: 50px 4%;
   }
   .home-text h1{
-    font-size: 1rem;
+    font-size: 3rem;
+  }
+  .home-text2 h1{
+    font-size: 3rem;
   }
 }
 
@@ -348,9 +456,37 @@ header.shadow .navbar a {
   }
   .home-text h1{
     font-size: 1.7rem;
-  }  
+  } 
+  .home-text2 h1{
+    font-size: 1.7rem;
+  }   
   .box .box-img{
     height: 240px;
+  }
+}
+
+@media screen and (max-width:1200px){
+  .inner-container{
+      padding: 80px;
+  }
+}
+
+@media screen and (max-width:1000px){
+  .about-section{
+      background-size: 100%;
+      padding: 100px 40px;
+  }
+  .inner-container{
+      width: 100%;
+  }
+}
+
+@media screen and (max-width:600px){
+  .about-section{
+      padding: 0;
+  }
+  .inner-container{
+      padding: 60px;
   }
 }
 }
