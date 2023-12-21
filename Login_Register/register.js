@@ -15,7 +15,32 @@ document.addEventListener("DOMContentLoaded", function () {
       email: email,
       password: password,
     };
-
+    registerUser(formData);
     console.log(formData);
   });
 });
+
+async function registerUser(data) {
+  const userData = data;
+  try {
+    const response = await fetch("http://localhost:5000/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    });
+
+    const data = await response.json();
+    console.log(data); // Gelen mesajı consola yazdır
+
+    // İşlem başarılıysa kullanıcıyı bilgilendir
+    if (response.ok) {
+      alert("User registered successfully!");
+    } else {
+      alert("Error: " + data.message);
+    }
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
+}
