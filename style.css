@@ -56,6 +56,11 @@ header.shadow .navbar a {
   column-gap: 0.5rem;
 }
 
+.logo-png{
+  height: 26px;
+  width: auto;
+}
+
 .logo .bx {
   font-size: 24px;
   color: var(--main-color);
@@ -258,4 +263,94 @@ header.shadow .navbar a {
   background: var(--main-color);
   color: var(--bg-color);
   transition: 0.2s all linear;
+}
+
+@media (max-widht:1080px){
+  .home-text{
+    padding: 0 100px;
+  }
+}
+
+@media (max-width: 991px){
+  header{
+    padding: 18px 4%;
+  }
+  section{
+    padding: 50px 4%;
+  }
+  .home-text h1{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 774px){
+    header{
+      padding: 12px 4%;
+    }
+    #menu-icon{
+      display: initial;
+      color: var(--bg-color);
+    }
+    header.shadow #menu-icon {
+      color: var(--text-color);
+    }
+
+    .navbar{
+      position: absolute;
+      top: -570px;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      background: var(--bg-color);
+      row-gap: 1.4rem;
+      padding: 20px;
+      box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%); 
+      transition: 0.2s all linear;
+      text-align: center;
+    }
+    .navbar a{
+      width: 100%;
+      color: var(--text-color);
+    }
+    .navbar a:hover{
+      color: var(--main-color);
+      border-bottom: 1px solid var(--main-color)
+    }
+
+    .navbar a::after{
+      display: none;
+    }
+    .navbar.active{
+      top: 100%;
+    }
+    .home-text h1{
+      font-size: 2.4rem;
+    }
+    .btn{
+      padding: 0.6rem 1.2rem;
+    }
+    .movies-container{
+      grid-template-columns: repeat(auto-fit,minmax(160px,auto));
+}
+
+@media (max-widht: 472px){
+  .footer{
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+}
+
+@media (max-widht: 370px) {
+  header{
+    padding: 6px 4%;
+  }
+  .home-text h1{
+    font-size: 1.7rem;
+  }  
+  .box .box-img{
+    height: 240px;
+  }
+}
 }

@@ -31,6 +31,14 @@ section {
   height: 683px;
 }
 
+.logo{
+  position: absolute;
+  height: 30px;
+  width: auto;
+  left: 60px;
+  top: 50px;
+}
+
 h2 {
   font-size: 2em;
   color: #fff;
@@ -73,6 +81,14 @@ input:valid ~ label {
   font-size: 1.2em;
   top: 20px;
 }
+
+.go-back a{
+  color: #fff;
+  position: absolute;
+  top: 58px;
+  font-size: 1.5rem;
+}
+
 .forget {
   margin: -15px 0 15px;
   font-size: 0.9em;
