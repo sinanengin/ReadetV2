@@ -31,7 +31,11 @@ section {
   height: 683px;
 }
 
-.logo{
+#form-forgot {
+  height: 683px;
+}
+
+.logo {
   position: absolute;
   height: 30px;
   width: auto;
@@ -82,7 +86,7 @@ input:valid ~ label {
   top: 20px;
 }
 
-.go-back a{
+.go-back a {
   color: #fff;
   position: absolute;
   top: 58px;
